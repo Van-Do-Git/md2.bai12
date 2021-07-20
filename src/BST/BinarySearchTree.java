@@ -52,10 +52,19 @@ public class BinarySearchTree<E extends Comparable<E>> extends AbstracTree<E> {
     public void inorder() {
         inorder(root);
     }
-    public void inorder(TreeNode<E> root){
+
+    public void inorder(TreeNode<E> root) {
         if (root == null) return;
         inorder(root.left);
         System.out.println(root.element + " ");
         inorder(root.right);
     }
+
+    public void postOrder() {
+        inorder(root.left);
+        inorder(root.right);
+        System.out.println(root.element+ " ");
+    }
+
 }
+

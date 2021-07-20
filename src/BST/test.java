@@ -21,5 +21,6 @@ public class test {
         tree2.insert(13);
         tree2.insert(4);
         tree2.inorder();
+        tree2.postOrder();
     }
 }
