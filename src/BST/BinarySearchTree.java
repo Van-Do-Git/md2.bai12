@@ -67,9 +67,21 @@ public class BinarySearchTree<E extends Comparable<E>> extends AbstracTree<E> {
     }
 
     public void preOrder() {
-        System.out.println(root.element+ " ");
+        System.out.println(root.element + " ");
         inorder(root.left);
         inorder(root.right);
+    }
+
+    public boolean searchBST(E e) {
+        TreeNode<E> curentNode = root;
+        while (curentNode != null) {
+            if (e.compareTo(curentNode.element)>0){
+                curentNode = curentNode.right;
+            }else if (e.compareTo(curentNode.element)<0){
+                curentNode = curentNode.left;
+            }else return true;
+        }
+        return false;
     }
 }
 
